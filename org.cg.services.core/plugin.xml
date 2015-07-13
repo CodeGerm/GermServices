@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.cg.dao.webcontainer.WebApp">
+      <webapp 
+      		contextRoot="/cg"
+            docRoot="/webContent"
+            startOrder="38">
+         <param
+               name="Germ Service.param1"
+               value="Germ Service.param1">
+         </param>
+      </webapp>
+   </extension>
+</plugin>
