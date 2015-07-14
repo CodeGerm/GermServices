@@ -83,7 +83,8 @@ Bundle-ClassPath: target/classes/,
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.cg.services.core.osgi.Activator
 Bundle-Vendor: CodeGerm
-Export-Package: ch.epfl.lamp.compiler.msil,
+Export-Package: META-INF,
+ ch.epfl.lamp.compiler.msil,
  ch.epfl.lamp.compiler.msil.emit,
  ch.epfl.lamp.compiler.msil.util,
  ch.epfl.lamp.fjbg,
