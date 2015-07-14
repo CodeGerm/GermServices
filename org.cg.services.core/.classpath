@@ -7,6 +7,16 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src/main/assembly"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/asm-all-repackaged-2.2.0-b21.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cglib-2.2.0-b21.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/guava-14.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/hk2-api-2.2.0-b21.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/hk2-locator-2.2.0-b21.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/hk2-utils-2.2.0-b21.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/javax.inject-2.2.0-b21.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/jersey-common-2.4.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/osgi-resource-locator-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-rs-service-description-3.1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/annotations-2.0.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/aopalliance-1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/asm-5.0.4.jar"/>
