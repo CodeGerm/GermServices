@@ -5,7 +5,7 @@
       <webapp 
       		contextRoot="/cg"
             docRoot="/webContent"
-            startOrder="38">
+            startOrder="28">
          <param
                name="Germ Service.param1"
                value="Germ Service.param1">

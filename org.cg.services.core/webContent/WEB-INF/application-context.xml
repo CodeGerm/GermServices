@@ -15,18 +15,18 @@
 	
 	<bean id="executionTimeFilter" class="org.cg.services.core.filter.ExecutionTimeFilter" lazy-init="false" />
 	
-	<!-- Use Snake Strategy for Json -->
-	<bean id="objMapper" class="org.codehaus.jackson.map.ObjectMapper" />
-	<bean id="snakeStrategy" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
-   		<property name="staticField" value="org.codehaus.jackson.map.PropertyNamingStrategy.CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES" />
+	<!-- Use Underscore Strategy for Json -->
+	<bean id="objMapper" class="com.fasterxml.jackson.databind.ObjectMapper" />
+	<bean id="undersocreStrategy" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+   		<property name="staticField" value="com.fasterxml.jackson.databind.PropertyNamingStrategy.CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES" />
 	</bean>
 	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
 		<property name="targetObject" ref="objMapper" />
 		<property name="targetMethod" value="setPropertyNamingStrategy" />
-		<property name="arguments" ref="snakeStrategy" />
+		<property name="arguments" ref="undersocreStrategy" />
 	</bean>
 	
-	<bean id='jacksonProvider' class='org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider' />
+	<bean id='jacksonProvider' class='com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider' />
 	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
 		<property name="targetObject" ref="jacksonProvider" />
 		<property name="targetMethod" value="setMapper" />
@@ -50,8 +50,8 @@
 			<bean class='org.cg.services.core.exception.mapper.InternalServiceExceptionMapper' />
 			<bean class='org.cg.services.core.exception.mapper.NotFoundExceptionMapper' />
 			<bean class='org.cg.services.core.exception.mapper.RuntimeExceptionMapper' />
-			<bean class='org.codehaus.jackson.jaxrs.JsonMappingExceptionMapper' />
-			<bean class='org.codehaus.jackson.jaxrs.JsonParseExceptionMapper' />
+			<bean class='com.fasterxml.jackson.jaxrs.base.JsonMappingExceptionMapper' />
+			<bean class='com.fasterxml.jackson.jaxrs.base.JsonParseExceptionMapper' />
 		</jaxrs:providers>
 		<jaxrs:features>
     		<bean class="org.apache.cxf.feature.LoggingFeature" />
