@@ -34,7 +34,6 @@ Bundle-ClassPath: target/lib/aopalliance-1.0.jar,
  target/lib/jackson-jaxrs-json-provider-2.5.4.jar,
  target/lib/jackson-module-jaxb-annotations-2.5.4.jar,
  target/lib/javax.annotation-api-1.2.jar,
- target/lib/javax.ws.rs-api-2.0.1.jar,
  target/lib/jaxb-core-2.2.11.jar,
  target/lib/jaxb-impl-2.2.11.jar,
  target/lib/joda-time-2.2.jar,
@@ -65,7 +64,8 @@ Bundle-ClassPath: target/lib/aopalliance-1.0.jar,
  target/lib/xml-resolver-1.2.jar,
  target/lib/xmlschema-core-2.2.1.jar,
  target/classes/,
- target/lib/guava-18.0.jar
+ target/lib/guava-18.0.jar,
+ target/lib/javax.ws.rs-api-2.0.1.jar
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.cg.services.core.osgi.Activator
 Bundle-Vendor: CodeGerm
