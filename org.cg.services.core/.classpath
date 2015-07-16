@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry exported="true" kind="lib" path="target/lib/guava-18.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/classes/"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="src" path="src/main/java">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" path="src/main/assembly"/>
-	<classpathentry kind="src" path="src/test/java">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="target/lib/annotations-2.0.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/aopalliance-1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/asm-5.0.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/com.springsource.javax.servlet-2.4.0.jar"/>
@@ -35,23 +19,28 @@
 	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-ws-addr-3.1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-ws-policy-3.1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-wsdl-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-annotations-2.4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/guava-18.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/jackson-annotations-2.4.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-core-2.5.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-databind-2.5.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/jackson-dataformat-xml-2.4.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-dataformat-yaml-2.4.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-datatype-joda-2.4.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-jaxrs-base-2.5.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-jaxrs-json-provider-2.5.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-module-jaxb-annotations-2.5.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/javassist-3.18.2-GA.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/javax.annotation-api-1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/javax.ws.rs-api-2.0.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jaxb-core-2.2.11.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jaxb-impl-2.2.11.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/joda-time-2.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/log4j-1.2.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/jsr311-api-1.1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/neethi-3.0.3.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/org.osgi.core-6.0.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/slf4j-api-1.6.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/reflections-0.9.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/slf4j-api-1.7.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/slf4j-log4j12-1.7.12.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/spring-aop-3.2.4.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/spring-beans-3.2.4.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/spring-context-3.2.4.RELEASE.jar"/>
@@ -67,11 +56,36 @@
 	<classpathentry exported="true" kind="lib" path="target/lib/stax2-api-3.1.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/swagger-annotations-1.5.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/swagger-core-1.5.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/swagger-jaxrs-1.5.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/swagger-models-1.5.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/validation-api-1.1.0.Final.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/woodstox-core-asl-4.4.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/wsdl4j-1.6.3.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/xml-resolver-1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/xmlschema-core-2.2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/main/assembly"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
