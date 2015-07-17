@@ -11,11 +11,16 @@ import io.swagger.jaxrs.Reader;
 import io.swagger.jaxrs.config.JaxrsScanner;
 import io.swagger.jaxrs.config.ReaderConfigUtils;
 import io.swagger.jaxrs.listing.SwaggerSerializers;
+import io.swagger.models.Model;
 import io.swagger.models.Swagger;
+import io.swagger.models.properties.Property;
 import io.swagger.util.Yaml;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.google.common.base.CaseFormat;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -33,6 +38,8 @@ import javax.ws.rs.core.UriInfo;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -49,8 +56,19 @@ public class ApiListingResource {
     Log LOGGER = LogFactory.getLog(ApiListingResource.class);
     @Context
     ServletContext context;
+    
+    private PropertyNamingStrategy propertyNamingStragegy = PropertyNamingStrategy.LOWER_CASE;
+    
+    public PropertyNamingStrategy getPropertyNamingStragegy() {
+		return propertyNamingStragegy;
+	}
 
-    protected synchronized Swagger scan(Application app, ServletConfig sc) {
+	public void setPropertyNamingStragegy(
+			PropertyNamingStrategy propertyNamingStragegy) {
+		this.propertyNamingStragegy = propertyNamingStragegy;
+	}
+
+	protected synchronized Swagger scan(Application app, ServletConfig sc) {
         Swagger swagger = null;
         Scanner scanner = ScannerFactory.getScanner();
         LOGGER.debug("using scanner " + scanner);
@@ -110,6 +128,7 @@ public class ApiListingResource {
                         getCookies(headers),
                         getHeaders(headers));
             }
+            swagger = convertPropertyNaming(swagger);
             return Response.ok().entity(swagger).build();
         } else {
             return Response.status(404).build();
@@ -141,7 +160,7 @@ public class ApiListingResource {
                             getCookies(headers),
                             getHeaders(headers));
                 }
-
+                swagger = convertPropertyNaming(swagger);
                 String yaml = Yaml.mapper().writeValueAsString(swagger);
                 String[] parts = yaml.split("\n");
                 StringBuilder b = new StringBuilder();
@@ -157,6 +176,26 @@ public class ApiListingResource {
             e.printStackTrace();
         }
         return Response.status(404).build();
+    }
+    
+    protected Swagger convertPropertyNaming (Swagger swagger) {
+    	 //for now, we only need to support CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+    	if (propertyNamingStragegy==PropertyNamingStrategy.CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES) {
+    		Iterator<Map.Entry<String, Property>> propertiesIter;
+    		Map<String, Property> properties;
+    		for ( Model model:swagger.getDefinitions().values() ) {
+    			propertiesIter = model.getProperties().entrySet().iterator();
+    			properties = new LinkedHashMap<String, Property>();
+    			while (propertiesIter.hasNext()) {
+    				Map.Entry<String, Property> property = propertiesIter.next();
+    				properties.put( CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, property.getKey()),
+    							    property.getValue() );
+    				propertiesIter.remove();
+    			}
+    			model.setProperties(properties);
+    		}
+    	}
+        return swagger;
     }
 
     protected Map<String, List<String>> getQueryParams(MultivaluedMap<String, String> params) {
