@@ -17,6 +17,10 @@ public class CGDateTimeSerializer extends JsonSerializer<CGDateTime> {
     @Override
     public void serialize(CGDateTime value, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) 
     		throws IOException, JsonProcessingException {
-    	jsonGenerator.writeString(value.toString());
+    	if (value.isFormated()) {
+    		jsonGenerator.writeString(value.getAsString());
+    	} else {
+    		jsonGenerator.writeNumber(value.getAsLong());
+    	}
     }
 }

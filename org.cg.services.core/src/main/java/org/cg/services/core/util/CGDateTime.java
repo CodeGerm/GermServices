@@ -38,6 +38,10 @@ public class CGDateTime {
 		return dateTimeFormatter.print(time);
 	}
 
+	public boolean isFormated() {
+		return isFormated;
+	}
+
 	@Override
 	public String toString() {
 		return isFormated ? dateTimeFormatter.print(time) : String.valueOf(time.getMillis());
