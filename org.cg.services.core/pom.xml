@@ -70,6 +70,13 @@
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		
+		<!-- Spring Module -->
+		<dependency>
+			<groupId>org.springmodules</groupId>
+			<artifactId>spring-modules-jakarta-commons</artifactId>
+			<version>0.8</version>
+		</dependency>
 
 		<!-- Spring OSGi -->
 		<dependency>
