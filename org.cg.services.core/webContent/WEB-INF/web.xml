@@ -6,11 +6,7 @@
 	
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>webContent/WEB-INF/application-context.xml</param-value>
-	</context-param>
-	<context-param>
-		<param-name>contextClass</param-name>
-		<param-value>org.cg.services.core.osgi.CGOsgiBundleXmlWebApplicationContext</param-value>
+		<param-value>WEB-INF/application-context.xml</param-value>
 	</context-param>
 	
 	<filter>

@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-core-2.4.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-databind-2.4.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-jaxrs-base-2.4.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-jaxrs-json-provider-2.4.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-module-jaxb-annotations-2.4.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/annotations-2.0.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/aopalliance-1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/asm-5.0.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/com.springsource.javax.servlet-2.4.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/com.springsource.org.aopalliance-1.0.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/commons-lang3-3.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/commons-logging-1.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-core-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-bindings-soap-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-bindings-xml-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-databinding-jaxb-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-frontend-jaxrs-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-frontend-jaxws-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-frontend-simple-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-rs-service-description-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-transports-http-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-ws-addr-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-ws-policy-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-wsdl-3.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/commons-logging-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-core-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-bindings-soap-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-bindings-xml-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-databinding-jaxb-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-frontend-jaxrs-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-frontend-jaxws-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-frontend-simple-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-rs-service-description-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-transports-http-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-ws-addr-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-ws-policy-3.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-wsdl-3.1.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/guava-18.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-annotations-2.4.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/jackson-core-2.4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/jackson-databind-2.4.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-dataformat-xml-2.4.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-dataformat-yaml-2.4.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jackson-datatype-joda-2.4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/jackson-jaxrs-base-2.4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/jackson-jaxrs-json-provider-2.4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/jackson-module-jaxb-annotations-2.4.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/javassist-3.18.2-GA.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/javax.annotation-api-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/javax.servlet-api-3.1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/javax.ws.rs-api-2.0.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jaxb-core-2.2.11.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/jaxb-impl-2.2.11.jar"/>
@@ -40,17 +39,13 @@
 	<classpathentry exported="true" kind="lib" path="target/lib/org.osgi.core-6.0.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/reflections-0.9.9.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/slf4j-api-1.7.12.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-aop-3.2.4.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-beans-3.2.4.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-context-3.2.4.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-core-3.2.4.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-expression-3.2.4.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-osgi-core-1.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-osgi-extender-1.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-osgi-io-1.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-osgi-web-1.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-test-3.2.4.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-web-3.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-aop-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-beans-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-context-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-core-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-expression-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-test-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-web-4.2.4.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/stax2-api-3.1.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/swagger-annotations-1.5.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/swagger-core-1.5.0.jar"/>
