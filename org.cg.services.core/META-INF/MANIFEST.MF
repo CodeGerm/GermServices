@@ -713,4 +713,5 @@ Bundle-ClassPath: target/classes/,
  target/lib/woodstox-core-asl-4.4.1.jar,
  target/lib/wsdl4j-1.6.3.jar,
  target/lib/xml-resolver-1.2.jar,
- target/lib/xmlschema-core-2.2.1.jar
+ target/lib/xmlschema-core-2.2.1.jar,
+ target/lib/slf4j-log4j12-1.7.12.jar
