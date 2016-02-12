@@ -27,7 +27,7 @@ public class InternalServiceExceptionMapper implements ExceptionMapper<InternalS
         ServiceExceptionMessage serviceExceptionDetails = new ServiceExceptionMessage(
         		Response.Status.INTERNAL_SERVER_ERROR.getStatusCode(),
         		Response.Status.INTERNAL_SERVER_ERROR.toString(),
-        		exception.getMessage() !=null ? exception.getMessage() : "Internal Error");
+        		exception.getCause() !=null ? exception.getCause().getMessage() : "Internal Error");
         
        return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(serviceExceptionDetails).type(MediaType.APPLICATION_JSON).build();
     }
