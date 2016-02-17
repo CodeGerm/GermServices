@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry exported="true" kind="lib" path="target/lib/javax.websocket-api-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-webmvc-4.2.4.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/spring-messaging-4.2.4.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/spring-websocket-4.2.4.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/annotations-2.0.1.jar"/>
