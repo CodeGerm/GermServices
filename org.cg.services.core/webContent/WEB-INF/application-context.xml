@@ -1,8 +1,13 @@
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+<beans 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
 	xmlns:jaxws="http://cxf.apache.org/jaxws"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context.xsd
 						http://cxf.apache.org/jaxrs
 						http://cxf.apache.org/schemas/jaxrs.xsd
 						http://cxf.apache.org/jaxws
@@ -34,7 +39,9 @@
 	
 	<jaxrs:server address="/" id="cg-service">
 		<jaxrs:serviceBeans>
+		 	<ref bean="swaggerResource" />	
 			<bean class="org.cg.services.core.service.CGCoreService" />
+			<bean class="org.cg.services.core.swagger.example.CGCoreServiceImpl" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
 			<entry key="xml" value="application/xml" />
@@ -42,6 +49,7 @@
 		</jaxrs:extensionMappings>
 		<jaxrs:providers>
 			<ref bean='jacksonProvider' />
+			<ref bean="swaggerWriter" />
 			<bean class='org.cg.services.core.exception.mapper.AuthenticationFailureExceptionMapper' />
 			<bean class='org.cg.services.core.exception.mapper.BadRequestExceptionMapper' />
 			<bean class='org.cg.services.core.exception.mapper.ClientErrorExceptionMapper' />
@@ -56,4 +64,45 @@
     		<bean class="org.apache.cxf.feature.LoggingFeature" />
 		</jaxrs:features>
 	</jaxrs:server>
+	
+	<!-- Swagger writers -->
+  	<bean id="swaggerWriter" class="io.swagger.jaxrs.listing.SwaggerSerializers" />
+  
+  	<!-- Swagger API listing resource -->
+  	<bean id="swaggerResource" class="org.cg.services.core.util.ApiListingResource" >
+  		 <property name="propertyNamingStragegy" ref="undersocreStrategy" />
+  	</bean>
+  
+  	<!-- this scans the classes for resources -->
+  	<bean id="swaggerConfig" class="io.swagger.jaxrs.config.BeanConfig">
+    	<property name="resourcePackage" value="org.cg.services.core.swagger.example"/>
+    	<property name="version" value="v1.0"/>
+    	<property name="host" value="${web.app.host}"/>
+    	<property name="basePath" value="cg/services"/>
+    	<property name="title" value="Core API"/>
+    	<property name="description" value="Specification for Core API"/>
+    	<property name="contact" value="lwz812@gmail.com"/>
+    	<property name="license" value="Apache 2.0"/>
+    	<property name="licenseUrl" value="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+    	<property name="scan" value="true"/>
+  	</bean>
+  	
+  	<!-- load properties from config.properites -->
+	<bean id="placeholderConfig"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="order" value="600" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<list>
+				<value>classpath:default.properties</value>
+				<!-- <value>file:/var/conf/deploy.properties</value> -->
+			</list>
+		</property>
+	</bean>
+	
+	<!-- This element activates the replacement of ${...} placeholders -->
+	<context:property-placeholder />
+
+	<!-- This element activates annotations in beans already registered in the application context -->
+	<context:annotation-config />
 </beans>
