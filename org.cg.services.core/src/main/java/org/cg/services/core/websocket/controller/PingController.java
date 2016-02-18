@@ -3,6 +3,7 @@ package org.cg.services.core.websocket.controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
@@ -15,6 +16,7 @@ public class PingController {
 	private static final Log LOG = LogFactory.getLog(PingController.class);
 
 	@Autowired
+	@Qualifier("org.springframework.messaging.simp.SimpMessagingTemplate#1")
 	public SimpMessageSendingOperations messagingTemplate;
 
 	@MessageMapping("/ping")
