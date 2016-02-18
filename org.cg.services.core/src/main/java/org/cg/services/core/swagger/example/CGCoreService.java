@@ -23,14 +23,7 @@ import org.cg.services.core.exception.ServiceExceptionMessage;
 @Api(value = "CG Core Service: Nothing useful here")
 @Path("/v1.0")
 public interface CGCoreService {
-	
-	/**
-	 * 
-	 * Generate fraudulent prediction base on user's ID Event
-	 *
-	 * @param event
-	 * @return id intelligence prediction
-	 */
+
 	@POST
 	@Path("/greetings")
 	@Consumes(MediaType.APPLICATION_JSON)
