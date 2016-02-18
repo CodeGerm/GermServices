@@ -1,14 +1,18 @@
-<?xml version="1.0"?>
-<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          					 http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+         
+	<display-name>Core Services</display-name>
 
-<web-app>
-	<display-name>Notification Manager</display-name>
-	
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>WEB-INF/application-context.xml</param-value>
 	</context-param>
-	
+
+	<absolute-ordering />
+
 	<filter>
 		<filter-name>ExecutionTimeFilter</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
@@ -25,7 +29,7 @@
 		<filter-name>ExecutionTimeFilter</filter-name>
 		<url-pattern>/services-internal/*</url-pattern>
 	</filter-mapping>
-	
+
 	<listener>
 		<listener-class>
 			org.springframework.web.context.ContextLoaderListener
@@ -42,6 +46,14 @@
 			<param-value>true</param-value>
 		</init-param>
 	</servlet>
+
+	<servlet>
+		<servlet-name>WebSocketDispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+		<async-supported>true</async-supported>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>CXFServlet</servlet-name>
 		<url-pattern>/services/*</url-pattern>
@@ -49,5 +61,9 @@
 	<servlet-mapping>
 		<servlet-name>CXFServlet</servlet-name>
 		<url-pattern>/services-internal/*</url-pattern>
+	</servlet-mapping>	
+		<servlet-mapping>
+		<servlet-name>WebSocketDispatcher</servlet-name>
+		<url-pattern>/websockets/*</url-pattern>
 	</servlet-mapping>
 </web-app>
