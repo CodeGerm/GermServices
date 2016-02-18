@@ -1,71 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-webmvc-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-webmvc-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-messaging-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-messaging-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-websocket-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-websocket-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/annotations-2.0.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/aopalliance-1.0.jar" sourcepath="/Users/WZ/.sourceattacher/aopalliance-1.0-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/asm-5.0.4.jar" sourcepath="/Users/WZ/.sourceattacher/asm-5.0.4-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/commons-lang3-3.2.1.jar" sourcepath="/Users/WZ/.sourceattacher/commons-lang3-3.2.1-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/commons-logging-1.2.jar" sourcepath="/Users/WZ/.sourceattacher/commons-logging-1.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-core-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-core-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-bindings-soap-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-bindings-soap-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-bindings-xml-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-bindings-xml-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-databinding-jaxb-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-databinding-jaxb-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-frontend-jaxrs-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-frontend-jaxrs-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-frontend-jaxws-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-frontend-jaxws-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-frontend-simple-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-frontend-simple-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-rs-service-description-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-rs-service-description-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-transports-http-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-transports-http-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-ws-addr-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-ws-addr-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-ws-policy-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-ws-policy-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/cxf-rt-wsdl-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-wsdl-3.1.5-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/guava-18.0.jar" sourcepath="/Users/WZ/.sourceattacher/guava-18.0-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-annotations-2.4.0.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-annotations-2.4.0-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-core-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-core-2.4.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-databind-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-databind-2.4.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-dataformat-xml-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-dataformat-xml-2.4.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-dataformat-yaml-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-dataformat-yaml-2.4.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-datatype-joda-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-datatype-joda-2.4.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-jaxrs-base-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-jaxrs-base-2.4.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-jaxrs-json-provider-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-jaxrs-json-provider-2.4.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jackson-module-jaxb-annotations-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-module-jaxb-annotations-2.4.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/javassist-3.18.2-GA.jar" sourcepath="/Users/WZ/.sourceattacher/javassist-3.18.2-GA-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/javax.annotation-api-1.2.jar" sourcepath="/Users/WZ/.sourceattacher/javax.annotation-api-1.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/javax.servlet-api-3.1.0.jar" sourcepath="/Users/WZ/.sourceattacher/javax.servlet-api-3.1.0-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/javax.ws.rs-api-2.0.1.jar" sourcepath="/Users/WZ/.sourceattacher/javax.ws.rs-api-2.0.1-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jaxb-core-2.2.11.jar" sourcepath="/Users/WZ/.sourceattacher/jaxb-core-2.2.11-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jaxb-impl-2.2.11.jar" sourcepath="/Users/WZ/.sourceattacher/jaxb-impl-2.2.11-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/joda-time-2.2.jar" sourcepath="/Users/WZ/.sourceattacher/joda-time-2.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/jsr311-api-1.1.1.jar" sourcepath="/Users/WZ/.sourceattacher/jsr311-api-1.1.1-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/neethi-3.0.3.jar" sourcepath="/Users/WZ/.sourceattacher/neethi-3.0.3-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/org.osgi.core-6.0.0.jar" sourcepath="/Users/WZ/.sourceattacher/osgi.core-6.0.0-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/reflections-0.9.9.jar" sourcepath="/Users/WZ/.sourceattacher/reflections-0.9.9-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/slf4j-api-1.7.12.jar" sourcepath="/Users/WZ/.sourceattacher/slf4j-api-1.7.12-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-aop-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-aop-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-beans-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-beans-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-context-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-context-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-core-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-core-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-expression-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-expression-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-test-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-test-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/spring-web-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-web-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/stax2-api-3.1.4.jar" sourcepath="/Users/WZ/.sourceattacher/stax2-api-3.1.4-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/swagger-annotations-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-annotations-1.5.0-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/swagger-core-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-core-1.5.0-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/swagger-jaxrs-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-jaxrs-1.5.0-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/swagger-models-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-models-1.5.0-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/validation-api-1.1.0.Final.jar" sourcepath="/Users/WZ/.sourceattacher/validation-api-1.1.0.Final-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/woodstox-core-asl-4.4.1.jar" sourcepath="/Users/WZ/.sourceattacher/woodstox-core-asl-4.4.1-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/wsdl4j-1.6.3.jar" sourcepath="/Users/WZ/.sourceattacher/wsdl4j-1.6.3-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/xml-resolver-1.2.jar" sourcepath="/Users/WZ/.sourceattacher/xml-resolver-1.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="target/lib/xmlschema-core-2.2.1.jar" sourcepath="/Users/WZ/.sourceattacher/xmlschema-core-2.2.1-sources.jar"/>
-	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="src" path="src/main/assembly"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
@@ -73,11 +14,71 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="target/lib/spring-webmvc-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-webmvc-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/spring-messaging-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-messaging-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/spring-websocket-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-websocket-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/annotations-2.0.1.jar"/>
+	<classpathentry kind="lib" path="target/lib/aopalliance-1.0.jar" sourcepath="/Users/WZ/.sourceattacher/aopalliance-1.0-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/asm-5.0.4.jar" sourcepath="/Users/WZ/.sourceattacher/asm-5.0.4-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/commons-lang3-3.2.1.jar" sourcepath="/Users/WZ/.sourceattacher/commons-lang3-3.2.1-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/commons-logging-1.2.jar" sourcepath="/Users/WZ/.sourceattacher/commons-logging-1.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-core-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-core-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-bindings-soap-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-bindings-soap-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-bindings-xml-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-bindings-xml-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-databinding-jaxb-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-databinding-jaxb-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-frontend-jaxrs-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-frontend-jaxrs-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-frontend-jaxws-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-frontend-jaxws-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-frontend-simple-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-frontend-simple-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-rs-service-description-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-rs-service-description-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-transports-http-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-transports-http-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-ws-addr-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-ws-addr-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-ws-policy-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-ws-policy-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-wsdl-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-wsdl-3.1.5-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/guava-18.0.jar" sourcepath="/Users/WZ/.sourceattacher/guava-18.0-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-annotations-2.4.0.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-annotations-2.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-core-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-core-2.4.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-databind-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-databind-2.4.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-dataformat-xml-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-dataformat-xml-2.4.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-dataformat-yaml-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-dataformat-yaml-2.4.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-datatype-joda-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-datatype-joda-2.4.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-jaxrs-base-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-jaxrs-base-2.4.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-jaxrs-json-provider-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-jaxrs-json-provider-2.4.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jackson-module-jaxb-annotations-2.4.2.jar" sourcepath="/Users/WZ/.sourceattacher/jackson-module-jaxb-annotations-2.4.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/javassist-3.18.2-GA.jar" sourcepath="/Users/WZ/.sourceattacher/javassist-3.18.2-GA-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/javax.annotation-api-1.2.jar" sourcepath="/Users/WZ/.sourceattacher/javax.annotation-api-1.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/javax.servlet-api-3.1.0.jar" sourcepath="/Users/WZ/.sourceattacher/javax.servlet-api-3.1.0-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/javax.ws.rs-api-2.0.1.jar" sourcepath="/Users/WZ/.sourceattacher/javax.ws.rs-api-2.0.1-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jaxb-core-2.2.11.jar" sourcepath="/Users/WZ/.sourceattacher/jaxb-core-2.2.11-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jaxb-impl-2.2.11.jar" sourcepath="/Users/WZ/.sourceattacher/jaxb-impl-2.2.11-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/joda-time-2.2.jar" sourcepath="/Users/WZ/.sourceattacher/joda-time-2.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/jsr311-api-1.1.1.jar" sourcepath="/Users/WZ/.sourceattacher/jsr311-api-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/neethi-3.0.3.jar" sourcepath="/Users/WZ/.sourceattacher/neethi-3.0.3-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/org.osgi.core-6.0.0.jar" sourcepath="/Users/WZ/.sourceattacher/osgi.core-6.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/reflections-0.9.9.jar" sourcepath="/Users/WZ/.sourceattacher/reflections-0.9.9-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/slf4j-api-1.7.12.jar" sourcepath="/Users/WZ/.sourceattacher/slf4j-api-1.7.12-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/spring-aop-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-aop-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/spring-beans-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-beans-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/spring-context-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-context-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/spring-core-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-core-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/spring-expression-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-expression-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/spring-test-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-test-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/spring-web-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-web-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/stax2-api-3.1.4.jar" sourcepath="/Users/WZ/.sourceattacher/stax2-api-3.1.4-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/swagger-annotations-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-annotations-1.5.0-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/swagger-core-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-core-1.5.0-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/swagger-jaxrs-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-jaxrs-1.5.0-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/swagger-models-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-models-1.5.0-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/validation-api-1.1.0.Final.jar" sourcepath="/Users/WZ/.sourceattacher/validation-api-1.1.0.Final-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/woodstox-core-asl-4.4.1.jar" sourcepath="/Users/WZ/.sourceattacher/woodstox-core-asl-4.4.1-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/wsdl4j-1.6.3.jar" sourcepath="/Users/WZ/.sourceattacher/wsdl4j-1.6.3-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/xml-resolver-1.2.jar" sourcepath="/Users/WZ/.sourceattacher/xml-resolver-1.2-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/xmlschema-core-2.2.1.jar" sourcepath="/Users/WZ/.sourceattacher/xmlschema-core-2.2.1-sources.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
