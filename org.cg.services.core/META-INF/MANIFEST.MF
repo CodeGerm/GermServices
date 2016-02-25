@@ -813,4 +813,5 @@ Bundle-ClassPath: target/classes/,
  target/lib/slf4j-log4j12-1.7.12.jar,
  target/lib/spring-messaging-4.2.4.RELEASE.jar,
  target/lib/spring-websocket-4.2.4.RELEASE.jar,
- target/lib/spring-webmvc-4.2.4.RELEASE.jar
+ target/lib/spring-webmvc-4.2.4.RELEASE.jar,
+ target/lib/gson-2.6.1.jar
