@@ -23,11 +23,7 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>ExecutionTimeFilter</filter-name>
-		<url-pattern>/services/*</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-		<filter-name>ExecutionTimeFilter</filter-name>
-		<url-pattern>/services-internal/*</url-pattern>
+		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
 	<listener>
@@ -62,9 +58,6 @@
 	<servlet-mapping>
 		<servlet-name>RESTServices</servlet-name>
 		<url-pattern>/services/*</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>RESTServices</servlet-name>
 		<url-pattern>/services-internal/*</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
