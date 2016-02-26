@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType;
  * @author WZ
  * 
  */
-public class CGCoreService {
+public class PingService {
 
 	@GET
 	@Path("/ping/{message}")

@@ -40,7 +40,7 @@
 	<jaxrs:server address="/" id="cg-service">
 		<jaxrs:serviceBeans>
 		 	<ref bean="swaggerResource" />	
-			<bean class="org.cg.services.core.service.CGCoreService" />
+			<bean class="org.cg.services.core.service.PingService" />
 			<bean class="org.cg.services.core.swagger.example.CGCoreServiceImpl" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
