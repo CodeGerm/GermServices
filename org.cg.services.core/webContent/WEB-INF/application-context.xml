@@ -74,7 +74,7 @@
   	</bean>
   
   	<!-- this scans the classes for resources -->
-  	<bean id="swaggerConfig" class="io.swagger.jaxrs.config.BeanConfig">
+  	<bean id="swaggerConfig" class="org.cg.services.core.util.ServiceAwareBeanConfig">
     	<property name="resourcePackage" value="org.cg.services.core.swagger.example"/>
     	<property name="version" value="v1.0"/>
     	<property name="schemes" value="${web.app.scheme}"/>

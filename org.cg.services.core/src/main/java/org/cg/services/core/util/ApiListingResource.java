@@ -3,7 +3,6 @@ package org.cg.services.core.util;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.config.FilterFactory;
 import io.swagger.config.Scanner;
-import io.swagger.config.ScannerFactory;
 import io.swagger.config.SwaggerConfig;
 import io.swagger.core.filter.SpecFilter;
 import io.swagger.core.filter.SwaggerSpecFilter;
@@ -52,14 +51,13 @@ import java.util.Set;
  */
 @Path("/")
 public class ApiListingResource {
-    static boolean initialized = false;
     Log LOGGER = LogFactory.getLog(ApiListingResource.class);
     @Context
     ServletContext context;
     
     private PropertyNamingStrategy propertyNamingStragegy = PropertyNamingStrategy.LOWER_CASE;
-    
-    public PropertyNamingStrategy getPropertyNamingStragegy() {
+
+	public PropertyNamingStrategy getPropertyNamingStragegy() {
 		return propertyNamingStragegy;
 	}
 
@@ -68,14 +66,14 @@ public class ApiListingResource {
 		this.propertyNamingStragegy = propertyNamingStragegy;
 	}
 
-	protected synchronized Swagger scan(Application app, ServletConfig sc) {
+	protected synchronized Swagger scan(Application app, ServletConfig sc, String serviceId) {
         Swagger swagger = null;
-        Scanner scanner = ScannerFactory.getScanner();
+        Scanner scanner = ServiceAwareScannerFactory.getScanner(serviceId);
         LOGGER.debug("using scanner " + scanner);
 
         if (scanner != null) {
             SwaggerSerializers.setPrettyPrint(scanner.getPrettyPrint());
-            swagger = (Swagger) context.getAttribute("swagger");
+            swagger = (Swagger) context.getAttribute("swagger" + serviceId);
 
             Set<Class<?>> classes = new HashSet<Class<?>>();
             if (scanner instanceof JaxrsScanner) {
@@ -98,42 +96,42 @@ public class ApiListingResource {
                         LOGGER.debug("no configurator");
                     }
                 }
-                context.setAttribute("swagger", swagger);
+                context.setAttribute("swagger" + serviceId, swagger);
             }
         }
-        initialized = true;
         return swagger;
     }
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/swagger-json")
-    @ApiOperation(value = "The swagger definition in JSON", hidden = true)
-    public Response getListingJson(
-            @Context Application app,
-            @Context ServletConfig sc,
-            @Context HttpHeaders headers,
-            @Context UriInfo uriInfo) {
-        Swagger swagger = (Swagger) context.getAttribute("swagger");
-        if (!initialized) {
-            swagger = scan(app, sc);
-        }
-        if (swagger != null) {
-            SwaggerSpecFilter filterImpl = FilterFactory.getFilter();
-            if (filterImpl != null) {
-                SpecFilter f = new SpecFilter();
-                swagger = f.filter(swagger,
-                        filterImpl,
-                        getQueryParams(uriInfo.getQueryParameters()),
-                        getCookies(headers),
-                        getHeaders(headers));
-            }
-            swagger = convertPropertyNaming(swagger);
-            return Response.ok().entity(swagger).build();
-        } else {
-            return Response.status(404).build();
-        }
-    }
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/swagger-json")
+	@ApiOperation(value = "The swagger definition in JSON", hidden = true)
+	public Response getListingJson(
+			@Context Application app,
+			@Context ServletConfig sc,
+			@Context HttpHeaders headers,
+			@Context UriInfo uriInfo) {
+		String serviceId = uriInfo.getBaseUri().getPath();
+		Swagger swagger = (Swagger) context.getAttribute("swagger" + serviceId);
+		if (swagger==null) {
+			swagger = scan(app, sc, serviceId);
+		}
+		if (swagger != null) {
+			SwaggerSpecFilter filterImpl = FilterFactory.getFilter();
+			if (filterImpl != null) {
+				SpecFilter f = new SpecFilter();
+				swagger = f.filter(swagger,
+						filterImpl,
+						getQueryParams(uriInfo.getQueryParameters()),
+						getCookies(headers),
+						getHeaders(headers));
+			}
+			swagger = convertPropertyNaming(swagger);
+			return Response.ok().entity(swagger).build();
+		} else {
+			return Response.status(404).build();
+		}
+	}
 
     @GET
     @Produces("application/yaml")
@@ -144,9 +142,10 @@ public class ApiListingResource {
             @Context ServletConfig sc,
             @Context HttpHeaders headers,
             @Context UriInfo uriInfo) {
-        Swagger swagger = (Swagger) context.getAttribute("swagger");
-        if (!initialized) {
-            swagger = scan(app, sc);
+		String serviceId = uriInfo.getBaseUri().getPath();
+        Swagger swagger = (Swagger) context.getAttribute("swagger" + serviceId);
+        if (swagger==null) {
+            swagger = scan(app, sc, serviceId);
         }
         try {
             if (swagger != null) {
@@ -179,6 +178,9 @@ public class ApiListingResource {
     }
     
     protected Swagger convertPropertyNaming (Swagger swagger) {
+    	if (swagger.getDefinitions() == null || swagger.getDefinitions().isEmpty()) {
+    		return swagger;
+    	}
     	 //for now, we only need to support CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
     	if (propertyNamingStragegy==PropertyNamingStrategy.CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES) {
     		Iterator<Map.Entry<String, Property>> propertiesIter;
