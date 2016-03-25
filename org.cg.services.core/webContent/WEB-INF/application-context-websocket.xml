@@ -16,14 +16,7 @@
         </websocket:stomp-endpoint>
         <websocket:simple-broker prefix="/cg/websockets/topic,/cg/websockets/queue"/>
     </websocket:message-broker>
-    <context:component-scan base-package="org.cg.services.core.websocket.example"/>
     
-    <websocket:message-broker application-destination-prefix="/app">
-        <websocket:stomp-endpoint path="/pingendpoint">
-         <websocket:sockjs/>
-        </websocket:stomp-endpoint>
-        <websocket:simple-broker prefix="/topic,/queue"/>
-    </websocket:message-broker>
+    <context:component-scan base-package="org.cg.services.core.websocket.example"/>
     <context:annotation-config/>
-	<context:component-scan base-package="org.cg.services.core.websocket.controller"/>
 </beans>
