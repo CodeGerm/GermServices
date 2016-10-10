@@ -1,12 +1,18 @@
 package org.cg.services.core.util;
 
-import java.util.Set;
-
-import com.google.common.base.Strings;
-
 import io.swagger.jaxrs.Reader;
 import io.swagger.jaxrs.config.BeanConfig;
 import io.swagger.models.Swagger;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.cg.services.core.osgi.Activator;
+import org.osgi.framework.Bundle;
+import org.osgi.framework.wiring.BundleWiring;
+
+import com.google.common.base.Strings;
 
 /**
  * Override setScan for BeanConfig so it supports services in multiple bundles
@@ -30,4 +36,34 @@ public class ServiceAwareBeanConfig extends BeanConfig {
 			ServiceAwareScannerFactory.setScanner(getBasePath(), this);
 		}
 	}
+	
+	@Override
+	public Set<Class<?>> classes() {
+		// Set current class loader
+		JoinClassLoader loader = new JoinClassLoader(Thread.currentThread().getContextClassLoader(),
+				getAllBundlesClassLoaders());
+		Thread.currentThread().setContextClassLoader(loader);
+
+		return super.classes();
+	}
+
+	private ClassLoader[] getAllBundlesClassLoaders() {
+		List<ClassLoader> loaders = new ArrayList<>();
+		Bundle[] bundles = Activator.getBundleContext().getBundles();
+		for (Bundle bundle : bundles) {
+			BundleWiring bundleWiring = bundle.adapt(BundleWiring.class);
+			if (bundleWiring != null) {
+				try {
+					ClassLoader classLoader = bundleWiring.getClassLoader();
+					if (classLoader != null) {
+						loaders.add(classLoader);
+					}
+				} catch (ClassCastException e) {
+					// Ignore as some bundles cannot get class loader
+				}
+			}
+		}
+		return loaders.toArray(new ClassLoader[loaders.size()]);
+	}
+
 }
