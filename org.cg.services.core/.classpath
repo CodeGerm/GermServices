@@ -8,11 +8,18 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="src" path="src/main/assembly"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-aop-4.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-beans-4.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-context-4.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-core-4.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-expression-4.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-messaging-4.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-test-4.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-web-4.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-webmvc-4.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/lib/spring-websocket-4.2.5.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/guava-12.0.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="target/lib/gson-2.6.1.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-webmvc-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-webmvc-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-messaging-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-messaging-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-websocket-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-websocket-4.2.4.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/annotations-2.0.1.jar"/>
 	<classpathentry kind="lib" path="target/lib/aopalliance-1.0.jar" sourcepath="/Users/WZ/.sourceattacher/aopalliance-1.0-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/asm-5.0.4.jar" sourcepath="/Users/WZ/.sourceattacher/asm-5.0.4-sources.jar"/>
@@ -51,13 +58,6 @@
 	<classpathentry kind="lib" path="target/lib/org.osgi.core-6.0.0.jar" sourcepath="/Users/WZ/.sourceattacher/osgi.core-6.0.0-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/reflections-0.9.9.jar" sourcepath="/Users/WZ/.sourceattacher/reflections-0.9.9-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/slf4j-api-1.7.12.jar" sourcepath="/Users/WZ/.sourceattacher/slf4j-api-1.7.12-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-aop-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-aop-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-beans-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-beans-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-context-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-context-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-core-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-core-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-expression-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-expression-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-test-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-test-4.2.4.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/spring-web-4.2.4.RELEASE.jar" sourcepath="/Users/WZ/.sourceattacher/spring-web-4.2.4.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/stax2-api-3.1.4.jar" sourcepath="/Users/WZ/.sourceattacher/stax2-api-3.1.4-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/swagger-annotations-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-annotations-1.5.0-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/swagger-core-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-core-1.5.0-sources.jar"/>
