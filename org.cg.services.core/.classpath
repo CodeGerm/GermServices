@@ -68,6 +68,7 @@
 	<classpathentry kind="lib" path="target/lib/wsdl4j-1.6.3.jar" sourcepath="/Users/WZ/.sourceattacher/wsdl4j-1.6.3-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/xml-resolver-1.2.jar" sourcepath="/Users/WZ/.sourceattacher/xml-resolver-1.2-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/xmlschema-core-2.2.1.jar" sourcepath="/Users/WZ/.sourceattacher/xmlschema-core-2.2.1-sources.jar"/>
+	<classpathentry kind="lib" path="target/lib/cxf-rt-rs-client-3.1.5.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
