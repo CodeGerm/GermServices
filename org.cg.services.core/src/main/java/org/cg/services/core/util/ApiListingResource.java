@@ -15,8 +15,8 @@ import io.swagger.models.Swagger;
 import io.swagger.models.properties.Property;
 import io.swagger.util.Yaml;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.google.common.base.CaseFormat;
@@ -51,7 +51,7 @@ import java.util.Set;
  */
 @Path("/")
 public class ApiListingResource {
-    Log LOGGER = LogFactory.getLog(ApiListingResource.class);
+    Logger LOGGER = LoggerFactory.getLogger(ApiListingResource.class);
     @Context
     ServletContext context;
     

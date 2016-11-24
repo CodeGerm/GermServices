@@ -1,7 +1,7 @@
 package org.cg.services.core.swagger.example;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.cg.services.core.exception.InvalidParameterException;
 import org.joda.time.DateTime;
 
@@ -17,7 +17,7 @@ public class CGCoreServiceImpl implements CGCoreService {
 	/**
 	 * Logger
 	 */
-	private static final Log LOG = LogFactory.getLog(CGCoreServiceImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(CGCoreServiceImpl.class);
 	
 	@Override
 	public GreetingMessage greetings(String message, Boolean formatTime) {

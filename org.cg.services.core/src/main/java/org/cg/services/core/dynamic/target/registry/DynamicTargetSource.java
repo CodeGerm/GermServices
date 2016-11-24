@@ -1,7 +1,7 @@
 package org.cg.services.core.dynamic.target.registry;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.aop.TargetSource;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactoryUtils;
@@ -15,7 +15,7 @@ import java.util.*;
 
 public class DynamicTargetSource implements TargetSource, InitializingBean, ApplicationContextAware {
 	
-	private static final Log LOG = LogFactory.getLog(DynamicTargetSource.class);
+	private static final Logger LOG = LoggerFactory.getLogger(DynamicTargetSource.class);
 
     private final List<TargetRegistry<?>> registries = new LinkedList<TargetRegistry<?>>();
 

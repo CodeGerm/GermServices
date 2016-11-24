@@ -6,8 +6,8 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.cg.services.core.exception.ServiceExceptionMessage;
 
 /**
@@ -18,7 +18,7 @@ import org.cg.services.core.exception.ServiceExceptionMessage;
 @Provider
 public class NotFoundExceptionMapper implements ExceptionMapper<NotFoundException> {
 	
-	private static final Log LOG = LogFactory.getLog(NotFoundExceptionMapper.class);
+	private static final Logger LOG = LoggerFactory.getLogger(NotFoundExceptionMapper.class);
 
 	@Override
 	public Response toResponse(NotFoundException exception) {

@@ -1,14 +1,14 @@
 package org.cg.services.core.dynamic.target.registry;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 
 public class BeanFactoryTargetRegistry<T> extends AbstractTargetRegistry<T> implements BeanFactoryAware {
 
-	private static final Log LOG = LogFactory.getLog(BeanFactoryTargetRegistry.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BeanFactoryTargetRegistry.class);
 
     private BeanFactory beanFactory;
     private String prefix = "";

@@ -4,8 +4,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.cg.services.core.exception.ServiceExceptionMessage;
 
 /**
@@ -15,7 +15,7 @@ import org.cg.services.core.exception.ServiceExceptionMessage;
  */
 public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException> {
 	
-	private static final Log LOG = LogFactory.getLog(RuntimeExceptionMapper.class);
+	private static final Logger LOG = LoggerFactory.getLogger(RuntimeExceptionMapper.class);
 
 	@Override
 	public Response toResponse(RuntimeException exception) {

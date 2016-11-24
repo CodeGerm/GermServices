@@ -24,7 +24,6 @@
 	<classpathentry kind="lib" path="target/lib/aopalliance-1.0.jar" sourcepath="/Users/WZ/.sourceattacher/aopalliance-1.0-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/asm-5.0.4.jar" sourcepath="/Users/WZ/.sourceattacher/asm-5.0.4-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/commons-lang3-3.2.1.jar" sourcepath="/Users/WZ/.sourceattacher/commons-lang3-3.2.1-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/commons-logging-1.2.jar" sourcepath="/Users/WZ/.sourceattacher/commons-logging-1.2-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/cxf-core-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-core-3.1.5-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/cxf-rt-bindings-soap-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-bindings-soap-3.1.5-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/cxf-rt-bindings-xml-3.1.5.jar" sourcepath="/Users/WZ/.sourceattacher/cxf-rt-bindings-xml-3.1.5-sources.jar"/>
@@ -57,7 +56,6 @@
 	<classpathentry kind="lib" path="target/lib/neethi-3.0.3.jar" sourcepath="/Users/WZ/.sourceattacher/neethi-3.0.3-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/org.osgi.core-6.0.0.jar" sourcepath="/Users/WZ/.sourceattacher/osgi.core-6.0.0-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/reflections-0.9.9.jar" sourcepath="/Users/WZ/.sourceattacher/reflections-0.9.9-sources.jar"/>
-	<classpathentry kind="lib" path="target/lib/slf4j-api-1.7.12.jar" sourcepath="/Users/WZ/.sourceattacher/slf4j-api-1.7.12-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/stax2-api-3.1.4.jar" sourcepath="/Users/WZ/.sourceattacher/stax2-api-3.1.4-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/swagger-annotations-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-annotations-1.5.0-sources.jar"/>
 	<classpathentry kind="lib" path="target/lib/swagger-core-1.5.0.jar" sourcepath="/Users/WZ/.sourceattacher/swagger-core-1.5.0-sources.jar"/>
