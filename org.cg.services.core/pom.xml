@@ -5,17 +5,27 @@
 	<artifactId>org.cg.services.core</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
-	<name>GermServices</name>
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>A simple web services development suite with Spring and OSGi support and several utilities including exception handling, excution time filter, swagger api listing etc.</description>
 	<url>https://github.com/CodeGerm/GermServices</url>
 	<organization>
 		<name>CodeGerm</name>
 		<url>https://github.com/CodeGerm</url>
 	</organization>
 	<scm>
-		<url>https://github.com/CodeGerm/GermServices.git</url>
+		<url>https://github.com/CodeGerm/GermServices</url>
+		<connection>scm:git:git://github.com/CodeGerm/GermServices.git</connection>
+		<developerConnection>scm:git:git@github.com:CodeGerm/GermServices.git</developerConnection>
 	</scm>
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.2.5.RELEASE</spring.version>
 		<cxf.version>3.1.5</cxf.version>
 	</properties>
@@ -47,7 +57,7 @@
 			<artifactId>cxf-rt-rs-client</artifactId>
 			<version>${cxf.version}</version>
 		</dependency>
-		
+
 
 		<!-- Spring -->
 		<dependency>
