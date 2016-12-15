@@ -184,7 +184,7 @@
 				<version>2.17</version>
 				<configuration>
 					<excludes>
-						<exclude>**/TestPhoenixJdbcDataRepository.java</exclude>
+						<!-- <exclude>**/Test*.java</exclude> -->
 					</excludes>
 				</configuration>
 			</plugin>
