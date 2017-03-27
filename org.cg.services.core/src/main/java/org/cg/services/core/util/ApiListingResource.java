@@ -49,7 +49,7 @@ import java.util.Set;
  * @author WZ
  *
  */
-@Path("/")
+@Path("/api")
 public class ApiListingResource {
     Logger LOGGER = LoggerFactory.getLogger(ApiListingResource.class);
     @Context
