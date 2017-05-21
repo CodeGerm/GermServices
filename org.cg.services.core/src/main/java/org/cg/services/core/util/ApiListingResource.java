@@ -186,15 +186,17 @@ public class ApiListingResource {
     		Iterator<Map.Entry<String, Property>> propertiesIter;
     		Map<String, Property> properties;
     		for ( Model model:swagger.getDefinitions().values() ) {
-    			propertiesIter = model.getProperties().entrySet().iterator();
-    			properties = new LinkedHashMap<String, Property>();
-    			while (propertiesIter.hasNext()) {
-    				Map.Entry<String, Property> property = propertiesIter.next();
-    				properties.put( CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, property.getKey()),
-    							    property.getValue() );
-    				propertiesIter.remove();
+				if (model.getProperties()!=null) {
+					propertiesIter = model.getProperties().entrySet().iterator();
+					properties = new LinkedHashMap<String, Property>();
+					while (propertiesIter.hasNext()) {
+						Map.Entry<String, Property> property = propertiesIter.next();
+						properties.put( CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, property.getKey()),
+									    property.getValue() );
+						propertiesIter.remove();
+					}
+					model.setProperties(properties);
     			}
-    			model.setProperties(properties);
     		}
     	}
         return swagger;
