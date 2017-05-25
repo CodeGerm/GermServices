@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.codegerm</groupId>
 	<artifactId>org.cg.services.core</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4-SNAPSHOT</version>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>A simple web services development suite with Spring and OSGi support and several utilities including exception handling, excution time filter, swagger api listing etc.</description>
@@ -15,7 +15,7 @@
 		<url>https://github.com/CodeGerm/GermServices</url>
 		<connection>scm:git:git@github.com:CodeGerm/GermServices.git</connection>
 		<developerConnection>scm:git:git@github.com:CodeGerm/GermServices.git</developerConnection>
-	  <tag>org.cg.services.core-1.0.3</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<licenses>
 		<license>
