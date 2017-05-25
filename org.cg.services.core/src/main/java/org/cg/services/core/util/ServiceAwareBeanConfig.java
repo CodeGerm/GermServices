@@ -26,25 +26,23 @@ public class ServiceAwareBeanConfig extends BeanConfig {
 	@Override
 	public void setScan(boolean shouldScan) {
 		if (!Strings.isNullOrEmpty(getBasePath())) {
-			Set<Class<?>> classes = classes();
-			if (classes != null) {
-				reader.read(classes)
-				.host(getHost())
-				.basePath(getBasePath())
-				.info(getInfo());
+			// Set current class loader
+			ClassLoader originalClassLoader = Thread.currentThread().getContextClassLoader();
+			JoinClassLoader loader = new JoinClassLoader(Thread.currentThread().getContextClassLoader(), getAllBundlesClassLoaders());
+			try {
+				Thread.currentThread().setContextClassLoader(loader);
+				Set<Class<?>> classes = classes();
+				if (classes != null) {
+					reader.read(classes)
+					.host(getHost())
+					.basePath(getBasePath())
+					.info(getInfo());
+				}
+				ServiceAwareScannerFactory.setScanner(getBasePath(), this);
+			} finally {
+				Thread.currentThread().setContextClassLoader(originalClassLoader);
 			}
-			ServiceAwareScannerFactory.setScanner(getBasePath(), this);
 		}
-	}
-	
-	@Override
-	public Set<Class<?>> classes() {
-		// Set current class loader
-		JoinClassLoader loader = new JoinClassLoader(Thread.currentThread().getContextClassLoader(),
-				getAllBundlesClassLoaders());
-		Thread.currentThread().setContextClassLoader(loader);
-
-		return super.classes();
 	}
 
 	private ClassLoader[] getAllBundlesClassLoaders() {
