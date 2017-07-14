@@ -1,6 +1,5 @@
 package org.cg.services.core.exception.mapper;
 
-import javax.ws.rs.ForbiddenException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
