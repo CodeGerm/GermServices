@@ -1,13 +1,13 @@
 package org.cg.services.core.exception;
 
-import javax.ws.rs.BadRequestException;
+import javax.ws.rs.WebApplicationException;
 
 /**
  * A BadRequestException indicates duplicate resource
  * @author WZ
  *
  */
-public class DuplicateResourceException extends BadRequestException {
+public class DuplicateResourceException extends WebApplicationException {
 
 	/**
 	 * 
