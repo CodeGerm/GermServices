@@ -22,7 +22,7 @@ public class BadRequestExceptionMapper implements ExceptionMapper<BadRequestExce
 
     @Override
     public Response toResponse(BadRequestException exception) {
-    	LOG.error("Service Exception:", exception);
+    	LOG.info("Service Exception:", exception);
 
         ServiceExceptionMessage serviceExceptionDetails = new ServiceExceptionMessage(
         		Response.Status.BAD_REQUEST.getStatusCode(),

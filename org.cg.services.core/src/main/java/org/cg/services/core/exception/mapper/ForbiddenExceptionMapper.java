@@ -23,7 +23,7 @@ public class ForbiddenExceptionMapper implements ExceptionMapper<ClientForbidden
 	@Override
 	public Response toResponse(ClientForbiddenException exception) {
 		
-		LOG.error("Service exception: ", exception);
+		LOG.info("Service exception: ", exception);
 		
 		ServiceExceptionMessage serviceExceptionDetails = new ServiceExceptionMessage(
 				Response.Status.FORBIDDEN.getStatusCode(), 

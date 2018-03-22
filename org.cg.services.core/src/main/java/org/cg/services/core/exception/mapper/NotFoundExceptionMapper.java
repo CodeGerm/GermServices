@@ -22,7 +22,7 @@ public class NotFoundExceptionMapper implements ExceptionMapper<NotFoundExceptio
 
 	@Override
 	public Response toResponse(NotFoundException exception) {
-		LOG.error("Service Exception:", exception);
+		LOG.info("Service Exception:", exception);
 
 		ServiceExceptionMessage serviceExceptionDetails = new ServiceExceptionMessage(
 				Response.Status.NOT_FOUND.getStatusCode(),

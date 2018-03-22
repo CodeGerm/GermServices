@@ -22,7 +22,7 @@ public class AuthenticationFailureExceptionMapper implements ExceptionMapper<Not
 
     @Override
     public Response toResponse(NotAuthorizedException exception) {
-    	LOG.error("Service Exception:", exception);
+    	LOG.info("Service Exception:", exception);
 
         ServiceExceptionMessage serviceExceptionDetails = new ServiceExceptionMessage(
         		Response.Status.UNAUTHORIZED.getStatusCode(),

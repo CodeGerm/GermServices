@@ -22,7 +22,7 @@ public class InternalServiceExceptionMapper implements ExceptionMapper<InternalS
 
     @Override
     public Response toResponse(InternalServiceException exception) {
-    	LOG.error("Service Exception:", exception);
+    	LOG.warn("Service Exception:", exception);
 
         ServiceExceptionMessage serviceExceptionDetails = new ServiceExceptionMessage(
         		Response.Status.INTERNAL_SERVER_ERROR.getStatusCode(),

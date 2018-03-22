@@ -22,7 +22,7 @@ public class DuplicateResourceExceptionMapper implements ExceptionMapper<Duplica
 
     @Override
     public Response toResponse(DuplicateResourceException exception) {
-    	LOG.error("Service Exception:", exception);
+    	LOG.info("Service Exception:", exception);
 
         ServiceExceptionMessage serviceExceptionDetails = new ServiceExceptionMessage(
         		Response.Status.CONFLICT.getStatusCode(),

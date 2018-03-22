@@ -20,7 +20,7 @@ public class ClientErrorExceptionMapper implements ExceptionMapper<ClientErrorEx
 
     @Override
     public Response toResponse(ClientErrorException exception) {
-    	LOG.error("Service Exception", exception);
+    	LOG.info("Service Exception", exception);
 
         ServiceExceptionMessage serviceExceptionDetails = new ServiceExceptionMessage(
         		Response.Status.BAD_REQUEST.getStatusCode(),
