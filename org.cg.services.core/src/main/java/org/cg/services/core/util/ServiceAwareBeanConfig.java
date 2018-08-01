@@ -28,9 +28,7 @@ public class ServiceAwareBeanConfig extends BeanConfig {
 		if (!Strings.isNullOrEmpty(getBasePath())) {
 			// Set current class loader
 			ClassLoader originalClassLoader = Thread.currentThread().getContextClassLoader();
-			JoinClassLoader loader = new JoinClassLoader(Thread.currentThread().getContextClassLoader(), getAllBundlesClassLoaders());
 			try {
-				Thread.currentThread().setContextClassLoader(loader);
 				Set<Class<?>> classes = classes();
 				if (classes != null) {
 					reader.read(classes)
@@ -43,6 +41,14 @@ public class ServiceAwareBeanConfig extends BeanConfig {
 				Thread.currentThread().setContextClassLoader(originalClassLoader);
 			}
 		}
+	}
+
+	@Override
+	public Set<Class<?>> classes() {
+		// Set current class loader
+		JoinClassLoader loader = new JoinClassLoader(Thread.currentThread().getContextClassLoader(), getAllBundlesClassLoaders());
+		Thread.currentThread().setContextClassLoader(loader);
+		return super.classes();
 	}
 
 	private ClassLoader[] getAllBundlesClassLoaders() {
